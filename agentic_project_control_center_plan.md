@@ -18,6 +18,13 @@ Bu aşamada hedef kod scaffold üretmek değil; planlama, backlog, ajan profille
 
 ## Dokümantasyon Haritası
 
+### Root Documents
+
+- [README](README.md)
+- [DOC_INDEX](DOC_INDEX.md)
+- [PROJECT_STATUS](PROJECT_STATUS.md)
+- [CHANGELOG](CHANGELOG.md)
+
 ### Overview
 
 - [Product Vision](docs/00_overview/product_vision.md)
@@ -84,6 +91,38 @@ Bu aşamada hedef kod scaffold üretmek değil; planlama, backlog, ajan profille
 - [Commercial Positioning](docs/08_business/commercial_positioning.md)
 - [Pricing Ideas](docs/08_business/pricing_ideas.md)
 - [Risks](docs/08_business/risks.md)
+
+### Execution
+
+- [Build Order](docs/09_execution/build_order.md)
+- [Sprint 01 Foundation](docs/09_execution/sprint_01_foundation.md)
+- [Sprint 02 AI Planning](docs/09_execution/sprint_02_ai_planning.md)
+- [Sprint 03 Agent Runner](docs/09_execution/sprint_03_agent_runner.md)
+- [Sprint 04 Terminal Worker](docs/09_execution/sprint_04_terminal_worker.md)
+- [Development Checklist](docs/09_execution/development_checklist.md)
+- [Definition of Done](docs/09_execution/definition_of_done.md)
+- [Release Checklist](docs/09_execution/release_checklist.md)
+
+### UI
+
+- [Navigation Structure](docs/10_ui/navigation_structure.md)
+- [Command Center Screen](docs/10_ui/screen_command_center.md)
+- [Backlog Board Screen](docs/10_ui/screen_backlog_board.md)
+- [Agent Runner Screen](docs/10_ui/screen_agent_runner.md)
+- [Terminal Screen](docs/10_ui/screen_terminal.md)
+- [Approval Center Screen](docs/10_ui/screen_approval_center.md)
+- [Design System](docs/10_ui/design_system.md)
+
+### API
+
+- [API Overview](docs/11_api/api_overview.md)
+- [Projects API](docs/11_api/projects_api.md)
+- [Tasks API](docs/11_api/tasks_api.md)
+- [Agents API](docs/11_api/agents_api.md)
+- [Runs API](docs/11_api/runs_api.md)
+- [Approvals API](docs/11_api/approvals_api.md)
+- [Commands API](docs/11_api/commands_api.md)
+- [Files API](docs/11_api/files_api.md)
 
 ## Kritik İlkeler
 

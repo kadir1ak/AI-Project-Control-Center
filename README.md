@@ -1,8 +1,10 @@
-# Agentic Project Control Center
+# AI Project Control Center
 
 Web tabanlı AI yazılım üretim, planlama ve süreç yönetim sistemi.
 
-Bu repository, **Agentic Project Control Center** fikrini profesyonel bir ürün bilgi tabanına dönüştürmek için hazırlanmıştır. İlk aşamada hedef çalışan uygulama kodu üretmek değil; ürün vizyonunu, mimariyi, ajan rollerini, workflow'u, approval sistemini, entegrasyonları, şablonları ve MVP yol haritasını netleştirmektir.
+Bu repository, **AI Project Control Center** fikrini profesyonel bir ürün bilgi tabanına dönüştürmek için hazırlanmıştır. İlk aşamada hedef çalışan uygulama kodu üretmek değil; ürün vizyonunu, mimariyi, ajan rollerini, workflow'u, approval sistemini, entegrasyonları, şablonları ve MVP yol haritasını netleştirmektir.
+
+Eski çalışma adı: **Agentic Project Control Center**.
 
 Ana ürün yönü:
 
@@ -24,6 +26,7 @@ Kısa tanım:
 - [Repository Yapısı](#repository-yapısı)
 - [Dokümantasyon Haritası](#dokümantasyon-haritası)
 - [MVP Kapsamı](#mvp-kapsamı)
+- [Zorunlu Çalışma İlkeleri](#zorunlu-çalışma-ilkeleri)
 - [Önerilen Teknoloji Stack'i](#önerilen-teknoloji-stacki)
 - [Çalışma Akışı](#çalışma-akışı)
 - [Kullanım Senaryosu](#kullanım-senaryosu)
@@ -351,12 +354,18 @@ Varsayılan güvenlik yaklaşımı:
     ├── 05_integrations/
     ├── 06_templates/
     ├── 07_roadmap/
-    └── 08_business/
+    ├── 08_business/
+    ├── 09_execution/
+    ├── 10_ui/
+    └── 11_api/
 ```
 
 Kök dosyalar:
 
 - [agentic_project_control_center_plan.md](agentic_project_control_center_plan.md): ana indeks ve dokümantasyon giriş noktası.
+- [DOC_INDEX.md](DOC_INDEX.md): tüm dokümantasyon haritası ve başlangıç sırası.
+- [PROJECT_STATUS.md](PROJECT_STATUS.md): mevcut faz, tamamlananlar, sıradaki milestone ve açık sorular.
+- [CHANGELOG.md](CHANGELOG.md): dokümantasyon değişiklik geçmişi.
 - [archive/original/agentic_project_control_center_plan.original.md](archive/original/agentic_project_control_center_plan.original.md): ilk uzun strateji dokümanının arşivlenmiş hali.
 
 ## Dokümantasyon Haritası
@@ -428,6 +437,40 @@ Kök dosyalar:
 - [Pricing Ideas](docs/08_business/pricing_ideas.md)
 - [Risks](docs/08_business/risks.md)
 
+### Execution
+
+`docs/09_execution/`, MVP'yi hangi sırayla geliştireceğimizi ve sprint bazlı micro task yaklaşımını tanımlar.
+
+- [Build Order](docs/09_execution/build_order.md)
+- [Development Checklist](docs/09_execution/development_checklist.md)
+- [Definition of Done](docs/09_execution/definition_of_done.md)
+- [Release Checklist](docs/09_execution/release_checklist.md)
+
+### UI
+
+`docs/10_ui/`, sol navigasyon, ekran davranışları, state'ler ve tasarım sistemi kurallarını tanımlar.
+
+- [Navigation Structure](docs/10_ui/navigation_structure.md)
+- [Command Center Screen](docs/10_ui/screen_command_center.md)
+- [Backlog Board Screen](docs/10_ui/screen_backlog_board.md)
+- [Agent Runner Screen](docs/10_ui/screen_agent_runner.md)
+- [Terminal Screen](docs/10_ui/screen_terminal.md)
+- [Approval Center Screen](docs/10_ui/screen_approval_center.md)
+- [Design System](docs/10_ui/design_system.md)
+
+### API
+
+`docs/11_api/`, `/api/v1` REST standartlarını ve çekirdek endpoint sözleşmelerini tanımlar.
+
+- [API Overview](docs/11_api/api_overview.md)
+- [Projects API](docs/11_api/projects_api.md)
+- [Tasks API](docs/11_api/tasks_api.md)
+- [Agents API](docs/11_api/agents_api.md)
+- [Runs API](docs/11_api/runs_api.md)
+- [Approvals API](docs/11_api/approvals_api.md)
+- [Commands API](docs/11_api/commands_api.md)
+- [Files API](docs/11_api/files_api.md)
+
 ## MVP Kapsamı
 
 İlk sürümde yapılacaklar:
@@ -455,6 +498,16 @@ Kök dosyalar:
 - Sıfırdan IDE geliştirme.
 - Çoklu tenant billing sistemi.
 - Gelişmiş analytics.
+
+## Zorunlu Çalışma İlkeleri
+
+- Önce mevcut davranışı koru, sonra minimal değişiklik yap.
+- Dokümantasyon değişiklikleri küçük ve izlenebilir olmalı.
+- Riskli veya kapsam dışı değişiklikten önce etki analizi paylaşılmalı.
+- Kod, dependency, build sistemi veya runtime config bu dokümantasyon turunda değiştirilmemeli.
+- Hiçbir ajan veya otomasyon direkt `main` branch'e push yapmamalı.
+- Push işlemi yalnızca kullanıcıdan ayrıca onay alındıktan sonra yapılmalı.
+- Yeni içerikler mevcut vizyonla uyumlu olmalı: Web UI + Agent Runner + Sandbox Terminal + Backlog + Spec + Approval + Logs.
 
 ## Önerilen Teknoloji Stack'i
 
@@ -610,6 +663,8 @@ Mevcut durumda:
 - Ürün bilgi tabanı `docs/` altında bölümlendi.
 - Ajan rolleri, approval lifecycle, worker güvenliği, entegrasyon rehberleri ve şablonlar yazıldı.
 - README proje giriş noktası olarak eklendi.
+- Execution, UI ve API dokümantasyon alanları eklendi.
+- State machine, agent output contract, sandbox design, audit logging ve command policy dokümantasyonu ayrıştırıldı.
 
 Henüz mevcut olmayanlar:
 
